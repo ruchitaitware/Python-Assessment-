@@ -18,14 +18,14 @@ class TomeRater():
             return self.users == other.users and self.books == other.books
         return False
 
-    def create_book(self, title, isbn):
-        return Book(title, isbn)
+    def create_book(self, title, isbn, price):
+        return Book(title, isbn, price)
 
-    def create_novel(self, title, author, isbn):
-        return Fiction(title, author, isbn)
+    def create_novel(self, title, author, isbn, price):
+        return Fiction(title, author, isbn, price)
 
-    def create_non_fiction(self, title, subject, level, isbn):
-        return NonFiction(title, subject, level, isbn)
+    def create_non_fiction(self, title, subject, level, isbn, price):
+        return NonFiction(title, subject, level, isbn, price)
 
     def add_book_to_user(self, book, email, rating=None):
         if email not in self.users:

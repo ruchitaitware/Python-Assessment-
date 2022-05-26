@@ -2,8 +2,8 @@ from book import Book
 
 
 class NonFiction(Book):
-    def __init__(self, title, subject, level, isbn):
-        Book.__init__(self, title, isbn)
+    def __init__(self, title, subject, level, isbn, price):
+        Book.__init__(self, title, isbn, price)
         self.subject = subject
         self.level = level
 

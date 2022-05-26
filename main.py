@@ -20,7 +20,7 @@ if __name__ == '__main__':
     user.name = 'Hawkings'
     user.email = 'hawkings@gmail.com'
 
-    science = Book('science', '12345')
+    science = Book('science', '12345', 15)
     title = science.get_title()
     print(title)
 
@@ -35,43 +35,43 @@ if __name__ == '__main__':
     science.add_rating(3)
     print(science.ratings)
 
-    book = Book("science", 12345)
+    book = Book("science", 12345, 32)
     book.title = 'science'
     book.isbn = '12345'
 
-    chinua = Fiction('Things Fall Apart', 'Chinua Achebe', 7293740137)
+    chinua = Fiction('Things Fall Apart', 'Chinua Achebe', 7293740137, 26)
     author = chinua.get_author()
     print(author)
 
-    fiction = Fiction("Things Fall Apart", "Chinua Achebe", 72937401371)
+    fiction = Fiction("Things Fall Apart", "Chinua Achebe", 72937401371, 67)
     print(fiction.__repr__())
 
-    society_of_mind = NonFiction("Society of Mind", "Artificial Intelligence", "beginner", 34876289321)
+    society_of_mind = NonFiction("Society of Mind", "Artificial Intelligence", "beginner", 34876289321, 89)
     subject = society_of_mind.get_subject()
     print(subject)
 
-    society_of_mind = NonFiction("Society of Mind", "Artificial Intelligence", "beginner", 34876289322)
+    society_of_mind = NonFiction("Society of Mind", "Artificial Intelligence", "beginner", 34876289322, 22)
     level = society_of_mind.get_level()
     print(level)
 
-    non_fiction = NonFiction("Society of Mind", "Artificial intelligence", "beginner", 34876289323)
+    non_fiction = NonFiction("Society of Mind", "Artificial intelligence", "beginner", 34876289323, 90)
     print(non_fiction.__repr__())
 
     user = User("Hawkings", "hawkings@email.com")
     user.read_book("Things Fall Apart", 3)
     average = user.get_average_rating()
-    print(average)
+    print(f" Average Hawkings Rating: {average}")
 
-    book = Book("science", "123456")
+    book = Book("science", "123456", 45)
     book.add_rating(1)
     book.add_rating(4)
     average = book.get_average_rating()
-    print(average)
+    print(f" Average Science book rating : {average}")
 
     tomerater = TomeRater()
 
     # create book
-    book1 = tomerater.create_book("Society of Mind", 3487628932)
+    book1 = tomerater.create_book("Society of Mind", 3487628932, 66)
 
 
 

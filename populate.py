@@ -3,16 +3,16 @@ from tomerater import *
 Tome_Rater = TomeRater()
 
 #Create some books:
-book1 = Tome_Rater.create_book("Society of Mind", 12345678)
-novel1 = Tome_Rater.create_novel("Alice In Wonderland", "Lewis Carroll", 12345)
+book1 = Tome_Rater.create_book("Society of Mind", 12345678, 25)
+novel1 = Tome_Rater.create_novel("Alice In Wonderland", "Lewis Carroll", 12345, 30)
 novel1.set_isbn(9781536831139)
-nonfiction1 = Tome_Rater.create_non_fiction("Automate the Boring Stuff", "Python", "beginner", 1929452)
-nonfiction2 = Tome_Rater.create_non_fiction("Computing Machinery and Intelligence", "AI", "advanced", 11111938)
-novel2 = Tome_Rater.create_novel("The Diamond Age", "Neal Stephenson", 10101010)
-novel3 = Tome_Rater.create_novel("There Will Come Soft Rains", "Ray Bradbury", 10001000)
+nonfiction1 = Tome_Rater.create_non_fiction("Automate the Boring Stuff", "Python", "beginner", 1929452, 57)
+nonfiction2 = Tome_Rater.create_non_fiction("Computing Machinery and Intelligence", "AI", "advanced", 11111938, 68)
+novel2 = Tome_Rater.create_novel("The Diamond Age", "Neal Stephenson", 10101010, 24)
+novel3 = Tome_Rater.create_novel("There Will Come Soft Rains", "Ray Bradbury", 10001000, 71)
 
 # Adding book with duplicate isbn
-novel11 = Tome_Rater.create_novel("Work Hard", "Ajay", 12345)
+novel11 = Tome_Rater.create_novel("Work Hard", "Ajay", 12345, 22)
 
 
 #Create users:
@@ -50,5 +50,9 @@ print("Highest rated book:")
 print(Tome_Rater.highest_rated_book())
 print("Most read book:")
 print(Tome_Rater.most_read_book())
+print("Three most expensive books:")
+print(Tome_Rater.get_n_most_expensive_books(3))
+print("Book Worth of marvin@mit.edu:")
+print(Tome_Rater.get_worth_of_user("marvin@mit.edu"))
 
 print(Tome_Rater)
